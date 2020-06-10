@@ -1,0 +1,711 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="database.html" />
+    
+    
+    <link rel="prev" href="CHANGELOG.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CHANGELOG.html">
+            
+                <a href="CHANGELOG.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="project.html">
+            
+                <a href="project.html">
+            
+                    
+                    1. 系统架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="platform.html">
+            
+                <a href="platform.html">
+            
+                    
+                    2. 基础系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="wxmall.html">
+            
+                <a href="wxmall.html">
+            
+                    
+                    3. 小商场
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="admin.html">
+            
+                <a href="admin.html">
+            
+                    
+                    4. 管理后台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="mobmall.html">
+            
+                <a href="mobmall.html">
+            
+                    
+                    5. 轻商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x524D;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x6587;&#x6863;">&#x524D;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x6587;&#x6863;</h1>
+<p>&#x672C;&#x9879;&#x76EE;&#x524D;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x89C4;&#x8303;&#x548C;&#x63A5;&#x53E3;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<blockquote>
+<ol>
+<li>&#x63A5;&#x53E3;&#x6587;&#x6863;&#x5904;&#x4E8E;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x63A5;&#x53E3;&#x63CF;&#x8FF0;&#x548C;&#x63A5;&#x53E3;&#x5B9E;&#x9645;&#x4E0D;&#x5BF9;&#x5E94;&#xFF0C;&#x6B22;&#x8FCE;&#x63D0;&#x5EFA;&#x8BAE;&#x548C;&#x62A5;&#x544A;&#x3002;</li>
+</ol>
+</blockquote>
+<h2 id="1-&#x524D;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x89C4;&#x8303;">1 &#x524D;&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x89C4;&#x8303;</h2>
+<h3 id="11-&#x8BF7;&#x6C42;&#x683C;&#x5F0F;">1.1 &#x8BF7;&#x6C42;&#x683C;&#x5F0F;</h3>
+<p>&#x9879;&#x76EE;&#x5185;&#x91C7;&#x7528;RESTful&#x98CE;&#x683C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x5177;&#x4F53;&#x8BED;&#x4E49;&#x3002;
+&#x76EE;&#x524D;&#x53EA;&#x4F7F;&#x7528;<code>GET</code>&#x548C;<code>POST</code>&#x6765;&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x5185;&#x5BB9;&#x548C;&#x66F4;&#x65B0;&#x5185;&#x5BB9;&#x4E24;&#x79CD;&#x8BED;&#x4E49;&#x3002;</p>
+<h4 id="111-get&#x8BF7;&#x6C42;">1.1.1 GET&#x8BF7;&#x6C42;</h4>
+<pre><code>GET API_URL?params
+</code></pre><p>&#x4F8B;&#x5982;</p>
+<pre><code>GET /api/ncovDataArea/homePage
+</code></pre><p>&#x6216;&#x8005;</p>
+<pre><code>GET /api/webManage/news?pageSize=10&amp;pageNum=2
+</code></pre><h4 id="112-post&#x66F4;&#x65B0;">1.1.2 POST&#x66F4;&#x65B0;</h4>
+<pre><code>POST API_URL
+{
+    body
+}
+</code></pre><p>&#x4F8B;&#x5982;</p>
+<pre><code>POST /apply/delete/{id}
+</code></pre><p>&#x6216;&#x8005;    </p>
+<pre><code>POST /workflow/add
+{
+  &quot;id&quot;:&quot;&quot;,
+  &quot;workflowname&quot;:&quot;wxx&quot;,
+  &quot;defaultProcess&quot;:&quot;IAAS&quot;,
+  &quot;routername&quot;:&quot;wxxdesc&quot;,
+  &quot;area&quot;:&quot;&#x7701;&#x5385;&quot;,
+  &quot;policeCategory&quot;:&quot;&quot;,
+  &quot;version&quot;:null,
+  &quot;recheck&quot;:
+  {
+    &quot;id&quot;:&quot;&quot;,&quot;defaulthandleperson&quot;:&quot;410184198209096919&quot;,&quot;adviserperson&quot;:&quot;511321198706011277&quot;,&quot;noticeperon&quot;:&quot;410184198209096919,511321198706011277&quot;
+  },
+  &quot;approve&quot;:
+  {
+    &quot;id&quot;:&quot;&quot;,&quot;defaulthandleperson&quot;:&quot;410184198209096919&quot;,&quot;adviserperson&quot;:&quot;&quot;,&quot;noticeperon&quot;:&quot;&quot;
+  },
+  &quot;carry&quot;:
+  {
+    &quot;id&quot;:&quot;&quot;,&quot;defaulthandleperson&quot;:&quot;410184198209096919&quot;,&quot;adviserperson&quot;:&quot;&quot;,&quot;noticeperon&quot;:&quot;&quot;
+  }
+}
+</code></pre><h4 id="113-&#x5206;&#x9875;&#x8BF7;&#x6C42;&#x53C2;&#x6570;">1.1.3 &#x5206;&#x9875;&#x8BF7;&#x6C42;&#x53C2;&#x6570;</h4>
+<p>&#x5F53;GET&#x8BF7;&#x6C42;&#x540E;&#x7AEF;&#x83B7;&#x53D6;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x9012;&#x5206;&#x9875;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x4F8B;&#x5982;</p>
+<pre><code>GET /api/webManage/news?pageSize=10&amp;pageNum=2
+</code></pre><p>&#x672C;&#x9879;&#x76EE;&#x7684;&#x901A;&#x7528;&#x5206;&#x9875;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7EDF;&#x4E00;&#x4F20;&#x9012;2&#x4E2A;&#xFF1A;</p>
+<pre><code>pageNum: &#x8BF7;&#x6C42;&#x9875;&#x7801;
+pageSize: &#x6BCF;&#x4E00;&#x9875;&#x6570;&#x636E;&#x91CF;
+</code></pre><p>&#x6B64;&#x5916;&#xFF0C;&#x8FD9;&#x91CC;&#x4E24;&#x4E2A;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x540E;&#x7AEF;&#x5E94;&#x8BE5;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x524D;&#x7AEF;&#x4E0D;&#x8BBE;&#x7F6E;&#xFF0C;
+&#x540E;&#x7AEF;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x8FD4;&#x56DE;&#x5408;&#x9002;&#x7684;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x54CD;&#x5E94;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x8BA8;&#x8BBA;&#xFF1A;</p>
+<blockquote>
+<p>&#x6709;&#x4E9B;&#x8BF7;&#x6C42;&#x540E;&#x7AEF;&#x662F;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x91CC;pageNum&#x548C;pageSize&#x53EF;&#x80FD;&#x8BBE;&#x7F6E;&#x662F;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x3002;&#x4F46;&#x662F;
+&#x4ECD;&#x7136;&#x5EFA;&#x8BAE;&#x52A0;&#x4E0A;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4F8B;&#x5982;pageNum=1, pageSize=1000&#x3002;</p>
+</blockquote>
+<h3 id="12-&#x54CD;&#x5E94;&#x683C;&#x5F0F;">1.2 &#x54CD;&#x5E94;&#x683C;&#x5F0F;</h3>
+<pre><code>Content-Type: application/json;charset=UTF-8
+
+{
+    body
+}
+</code></pre><p>&#x800C;body&#x662F;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x683C;&#x5F0F;&#x7684;json&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>{
+    code: xxx,
+    msg: xxx,
+    data: {}
+}
+</code></pre><h4 id="121-&#x5931;&#x8D25;&#x5F02;&#x5E38;">1.2.1 &#x5931;&#x8D25;&#x5F02;&#x5E38;</h4>
+<pre><code>{
+    code: 500,
+    msg: &quot;&#x672A;&#x77E5;&#x5F02;&#x5E38;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;&quot;
+}
+</code></pre><ul>
+<li>&#x8BF7;&#x6C42;&#x6B63;&#x5E38;&#x548C;&#x9519;&#x8BEF;&#x65F6;&#x9700;&#x6839;&#x636E;code&#x5224;&#x65AD;&#x3002;</li>
+</ul>
+<h4 id="122-&#x64CD;&#x4F5C;&#x6210;&#x529F;">1.2.2 &#x64CD;&#x4F5C;&#x6210;&#x529F;</h4>
+<pre><code>{
+    code: 200,
+    errmsg: &quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;,
+}
+</code></pre><h4 id="123-&#x6570;&#x7EC4;&#x5BF9;&#x8C61;">1.2.3 &#x6570;&#x7EC4;&#x5BF9;&#x8C61;</h4>
+<pre><code>{
+    code: 200,
+    errmsg: &quot;&#x64CD;&#x4F5C;&#x6210;&#x529F;&quot;,
+    data: {
+        list: [],
+        current: 2&#xFF0C;
+        pages: 5,
+        size: 10,
+        total: 45
+    }
+}
+</code></pre><p>list&#x662F;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#xFF0C;current&#x65F6;&#x5F53;&#x524D;&#x9875;&#x7801;&#xFF0C;pages&#x662F;&#x603B;&#x9875;&#x6570;&#xFF0C;size&#x662F;&#x6BCF;&#x9875;&#x7684;&#x6570;&#x636E;&#x91CF;&#xFF0C;total&#x662F;&#x603B;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<h3 id="13-&#x9519;&#x8BEF;&#x7801;">1.3 &#x9519;&#x8BEF;&#x7801;</h3>
+<h4 id="131-&#x7CFB;&#x7EDF;&#x901A;&#x7528;&#x9519;&#x8BEF;&#x7801;">1.3.1 &#x7CFB;&#x7EDF;&#x901A;&#x7528;&#x9519;&#x8BEF;&#x7801;</h4>
+<p>&#x7CFB;&#x7EDF;&#x901A;&#x7528;&#x9519;&#x8BEF;&#x7801;&#x5305;&#x62EC;4XX&#x548C;5XX&#xFF0C;500&#x662F;&#x4E1A;&#x52A1;&#x9519;&#x8BEF;&#xFF0C;&#x5176;&#x4F59;&#x8BF7;&#x67E5;&#x770B;&#x9879;&#x76EE;httpstatus&#x5DE5;&#x5177;&#x7C7B;&#x7684;&#x72B6;&#x6001;&#x7801;&#x5B9A;&#x4E49;&#x3002;</p>
+<!--#### 1.3.2 前台业务错误码
+
+* AUTH_INVALID_ACCOUNT = 500
+* AUTH_CAPTCHA_UNSUPPORT = 501
+
+
+#### 1.3.3 管理后台业务错误码
+
+* ADMIN_INVALID_NAME = 601
+* ADMIN_INVALID_PASSWORD = 602
+-->
+<h3 id="14-token">1.4 Token</h3>
+<p>&#x524D;&#x540E;&#x7AEF;&#x91C7;&#x7528;session&#x6765;&#x9A8C;&#x8BC1;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</p>
+<h4 id="141-headertoken">1.4.1 Header&amp;Token</h4>
+<p>&#x524D;&#x540E;&#x7AEF;Token&#x4EA4;&#x6362;&#x6D41;&#x7A0B;&#x5F85;&#x5B8C;&#x5584;&#x6587;&#x6863;</p>
+<!--前后端Token交换流程如下：
+
+1. 前端访问商场登录API或者管理后台登录API;
+
+2. 成功以后，前端会接收后端响应的一个token，保存在本地；
+
+3. 请求受保护API则，则采用自定义头部携带此token
+
+4. 后端检验Token，成功则返回受保护的数据。
+
+#### 1.4.2 商场自定义Header
+
+访问受保护商场API采用自定义`X-Litemall-Token`头部
+
+1. 小商城（或轻商场）前端访问小商城后端登录API`/wx/auth/login`
+
+        POST /wx/auth/login
+
+        {
+            "username": "user123",
+            "password": "user123"
+        }
+
+2. 成功以后，前端会接收后端响应的一个token，
+
+        {
+          "errno": 0,
+          "data": {
+            "userInfo": {
+              "nickName": "user123",
+              "avatarUrl": "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif"
+            },
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0aGlzIGlzIGxpdGVtYWxsIHRva2VuIiwiYXVkIjoiTUlOSUFQUCIsImlzcyI6IkxJVEVNQUxMIiwiZXhwIjoxNTU3MzI2ODUwLCJ1c2VySWQiOjEsImlhdCI6MTU1NzMxOTY1MH0.XP0TuhupV_ttQsCr1KTaPZVlTbVzVOcnq_K0kXdbri0"
+          },
+          "errmsg": "成功"
+        }    
+
+3. 请求受保护API则，则采用自定义头部携带此token
+
+        GET http://localhost:8080/wx/address/list
+        X-Litemall-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0aGlzIGlzIGxpdGVtYWxsIHRva2VuIiwiYXVkIjoiTUlOSUFQUCIsImlzcyI6IkxJVEVNQUxMIiwiZXhwIjoxNTU3MzM2ODU0LCJ1c2VySWQiOjIsImlhdCI6MTU1NzMyOTY1NH0.JY1-cqOnmi-CVjFohZMqK2iAdAH4O6CKj0Cqd5tMF3M
+
+#### 1.4.3 管理后台自定义Header
+
+访问受保护管理后台API则是自定义`X-Litemall-Admin-Token`头部。
+
+1. 管理后台前端访问管理后台后端登录API`/admin/auth/login`
+
+        POST /admin/auth/login
+
+        {
+            "username": "admin123",
+            "password": "admin123"
+        }
+
+2. 成功以后，管理后台前端会接收后端响应的一个token，
+
+        {
+            "errno": 0,
+            "data": {
+                "adminInfo": {
+                    "nickName": "admin123",
+                    "avatar": "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif"
+                },
+                "token": "f2dbcae8-6e25-4f8e-bc58-aa81d512c952"
+            },
+            "errmsg": "成功"
+        }
+
+3. 请求受保护API时，则采用自定义头部携带此token
+
+        GET http://localhost:8080/wx/address/list
+        X-Litemall-Admin-Token: f2dbcae8-6e25-4f8e-bc58-aa81d512c952
+-->
+<h3 id="15-api&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6587;&#x6863;">1.5 API&#x81EA;&#x52A8;&#x751F;&#x6210;&#x6587;&#x6863;</h3>
+<p>&#x9879;&#x76EE;&#x5185;&#x4F7F;&#x7528;swagger-ui&#x751F;&#x6210;&#x63A5;&#x53E3;&#x6587;&#x6863;&#xFF0C;&#x53EF;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x63A5;&#x53E3;API&#x7684;&#x8BF4;&#x660E;&#x3002;</p>
+<p>GET /swagger-ui.html</p>
+<p>&#x7531;&#x4E8E;&#x4ECD;&#x5904;&#x4E8E;&#x8FED;&#x4EE3;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x76EE;&#x524D;&#x672A;&#x6709;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;API&#x8BF4;&#x660E;&#xFF0C;&#x524D;&#x7AEF;&#x53EF;&#x80FD;&#x4E0D;&#x7406;&#x89E3;&#x63A5;&#x53E3;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x3002;</p>
+<p><img src="pics/readme/swagger-ui.png" alt=""></p>
+<!-- ### 1.6 API格式
+
+这里定义一个API的格式：
+
+应用场景
+
+    xxx
+
+接口链接
+
+    xxx
+
+请求参数
+
+    xxx
+
+响应内容
+
+    xxx
+
+错误码
+
+    xxx
+-->
+<h3 id="16-api&#x9884;&#x89C8;">1.6 API&#x9884;&#x89C8;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x4F1A;&#x5206;&#x522B;&#x4ECE;&#x7528;&#x6237;&#x5C42;&#x9762;&#x548C;&#x7BA1;&#x7406;&#x5458;&#x5C42;&#x9762;&#x6784;&#x5EFA;&#x95E8;&#x6237;&#x7F51;&#x7AD9;API&#x670D;&#x52A1;&#x548C;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;API&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x95E8;&#x6237;&#x7F51;&#x7AD9;API&#x670D;&#x52A1;&#x6D89;&#x53CA;</p>
+<ul>
+<li>&#x9996;&#x9875;&#x670D;&#x52A1;</li>
+<li>&#x641C;&#x7D22;&#x670D;&#x52A1;</li>
+<li>&#x6587;&#x6863;&#x670D;&#x52A1;</li>
+<li>&#x8D44;&#x6E90;&#x7533;&#x8BF7;&#x670D;&#x52A1;</li>
+<li>&#x8D2D;&#x7269;&#x8F66;&#x670D;&#x52A1;</li>
+<li>&#x65B0;&#x95FB;&#x670D;&#x52A1;</li>
+<li>&#x5E94;&#x7528;&#x5E02;&#x573A;</li>
+<li>&#x8F6F;&#x4EF6;&#x670D;&#x52A1;&#xFF08;SAAS&#xFF09;</li>
+<li>&#x6570;&#x636E;&#x670D;&#x52A1;&#xFF08;DAAS&#xFF09;</li>
+<li>&#x5E73;&#x53F0;&#x670D;&#x52A1;&#xFF08;PAAS&#xFF09;</li>
+<li>&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x670D;&#x52A1;&#xFF08;IAAS&#xFF09;</li>
+<li>&#x53CD;&#x9988;&#x670D;&#x52A1;</li>
+<li>&#x8DB3;&#x8FF9;&#x670D;&#x52A1;</li>
+</ul>
+<p>&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x540E;&#x53F0;API&#x6D89;&#x53CA;</p>
+<ul>
+<li>&#x5DE5;&#x4F5C;&#x53F0;</li>
+<li>&#x7533;&#x8BF7;&#x5BA1;&#x6279;</li>
+<li>&#x79DF;&#x6237;&#x4E0A;&#x62A5;&#x7BA1;&#x7406;</li>
+<li>&#x79DF;&#x6237;&#x8D44;&#x6E90;&#x7BA1;&#x7406;</li>
+<li>&#x53F0;&#x8D26;&#x7BA1;&#x7406;</li>
+<li>&#x8D44;&#x6E90;&#x56DE;&#x6536;&#x7BA1;&#x7406;</li>
+<li>&#x670D;&#x52A1;&#x7BA1;&#x7406;</li>
+<li>&#x5E73;&#x53F0;&#x7BA1;&#x7406;</li>
+<li>&#x6587;&#x6863;&#x7BA1;&#x7406;</li>
+<li>&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</li>
+</ul>
+<!--### 1.7 API保护
+
+暂未知本项目API保护机制，是否能防御一般的XSS、CSRF、JS脚本注入等攻击。-->
+<h3 id="17-api&#x4F7F;&#x7528;">1.7 API&#x4F7F;&#x7528;</h3>
+<p>&#x5F53;&#x524D;API&#x4F7F;&#x7528;&#x8FD8;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x540E;&#x9762;&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x4F18;&#x5316;&#x548C;&#x5B8C;&#x5584;&#x3002;</p>
+<ul>
+<li><p>&#x524D;&#x7AEF;&#x9875;&#x9762;&#x6709;&#x901A;&#x7528;&#x6A21;&#x5757;&#xFF0C;&#x5927;&#x91CF;&#x5F15;&#x7528;API&#xFF0C;&#x4F7F;&#x65E0;&#x5173;&#x9875;&#x9762;&#x4E5F;&#x5F15;&#x7528;&#x8FC7;&#x591A;&#x65E0;&#x7528;API&#xFF0C;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#xFF0C;&#x9700;&#x5B8C;&#x5584;&#x3002;</p>
+</li>
+<li><p>API&#x6A21;&#x5757;&#x672A;&#x6574;&#x7406;&#xFF0C;&#x9700;&#x5B8C;&#x5584;&#x3002;</p>
+</li>
+</ul>
+<!--## 2 商城API服务
+
+### 2.1 安全服务
+
+#### 2.1.1 小程序微信登录
+
+应用场景
+
+    小程序环境下微信登录。
+
+接口链接
+
+    xxx
+
+请求参数
+
+    xxx
+
+响应内容
+
+    xxx
+
+错误码
+
+    xxx
+
+#### 2.1.2 账号登录
+
+应用场景
+
+    基于用户名和密码的账号登录
+
+接口链接
+
+    POST /wx/auth/login
+
+请求参数
+
+    {
+        "username": "user123",
+        "password": "user123"
+    }    
+
+响应内容
+
+    {
+      "errno": 0,
+      "data": {
+        "userInfo": {
+          "nickName": "user123",
+          "avatarUrl": "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif"
+        },
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0aGlzIGlzIGxpdGVtYWxsIHRva2VuIiwiYXVkIjoiTUlOSUFQUCIsImlzcyI6IkxJVEVNQUxMIiwiZXhwIjoxNTU3MzI2ODUwLCJ1c2VySWQiOjEsImlhdCI6MTU1NzMxOTY1MH0.XP0TuhupV_ttQsCr1KTaPZVlTbVzVOcnq_K0kXdbri0"
+      },
+      "errmsg": "成功"
+    }   
+
+错误码
+
+    略
+
+#### 2.1.3 注册
+
+应用场景
+
+    xxx
+
+接口链接
+
+    xxx
+
+请求参数
+
+    xxx
+
+响应内容
+
+    xxx
+
+错误码
+
+    xxx
+
+#### 2.1.4 退出
+
+应用场景
+
+    账号退出
+
+接口链接
+
+    POST /wx/auth/logout
+
+请求参数
+
+    {
+        "username": "user123",
+        "password": "user123"
+    }    
+
+响应内容
+
+    {
+        "errno": 0,
+        "errmsg": "成功"
+    }
+
+错误码
+
+    略
+    -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CHANGELOG.html" class="navigation navigation-prev " aria-label="Previous page: 更新日志">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="database.html" class="navigation navigation-next " aria-label="Next page: 数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"API","level":"1.3","depth":1,"next":{"title":"数据库","level":"1.4","depth":1,"path":"doc/database.md","ref":"doc/database.md","articles":[]},"previous":{"title":"更新日志","level":"1.2","depth":1,"path":"doc/CHANGELOG.md","ref":"doc/CHANGELOG.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/api.md","mtime":"2020-06-10T03:52:58.420Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T00:57:14.591Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
